@@ -1,0 +1,39 @@
+---
+import type { JSX } from 'astro/jsx-runtime';
+
+interface Props {
+  icono: string;
+  title: string;
+  level: string;
+}
+
+const { icono, title, level } = Astro.props;
+---
+
+<div class="skills__data">
+  <div>
+    <h3 class="skills__name">{title}</h3>
+    <span class="skills__level">{level}</span>
+  </div>
+</div>
+<style>
+  .skills__data {
+    display: flex;
+    column-gap: 0.5rem;
+  }
+
+  .skills__data i {
+    font-size: 3rem;
+    color: var(--first-color);
+  }
+
+  .skills__name {
+    font-size: var(--normal-font-size);
+    font-weight: 500;
+    line-height: 18px;
+  }
+
+  .skills__level {
+    font-size: var(--smaller-font-size);
+  }
+</style>

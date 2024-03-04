@@ -2,6 +2,7 @@
 import Layout from "@/layouts/Layout.astro"
 
 import AboutMe from "@/components/AboutMe.astro"
+import Skills from "@/components/Skills.astro"
 import Briefcase from "@/components/icons/Briefcase.astro"
 import CodeIcon from "@/components/icons/Code.astro"
 import Tools from "@/components/icons/Tools.astro"
@@ -9,6 +10,7 @@ import Experience from "@/components/Experience.astro"
 import ProfileCheck from "@/components/icons/ProfileCheck.astro"
 import Projects from "@/components/Projects.astro"
 import SectionContainer from "@/components/SectionContainer.astro"
+
 import Hero from "@/components/Hero.astro"
 ---
 
@@ -44,14 +46,14 @@ import Hero from "@/components/Hero.astro"
     </SectionContainer>
 
 
-    <SectionContainer id="proyectos">
+    <SectionContainer id="tecnologias">
       <h2
         class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
       >
         <Tools class="size-7" />
         Tecnologias
       </h2>
-     
+     <Skills/>
     </SectionContainer>
 
     <SectionContainer id="sobre-mi" >

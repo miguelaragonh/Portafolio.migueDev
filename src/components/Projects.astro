@@ -4,37 +4,41 @@ import NextJS from "./icons/NextJS.astro"
 import Tailwind from "./icons/Tailwind.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
+import Laravel from "./icons/Laravel.astro"
+import Css3 from "./icons/Css3.astro"
+import JS from "./icons/JS.astro"
+import Php from "./icons/Php.astro"
 
 const TAGS = {
-  NEXT: {
-    name: "Next.js",
+  LARAVEL: {
+    name: "",
     class: "bg-black text-white",
-    icon: NextJS,
+    icon: Laravel,
   },
-  TAILWIND: {
-    name: "Tailwind CSS",
+  CSS: {
+    name: "",
     class: "bg-[#003159] text-white",
-    icon: Tailwind,
+    icon: Css3,
+  },JS: {
+    name: "",
+    class: "bg-[#FFd700] text-white",
+    icon: JS,
+  },PHP: {
+    name: "",
+    class: "bg-[#003159] text-white",
+    icon: Php,
   },
 }
 const PROJECTS = [
   {
-    title: "SVGL - A beautiful library with SVG logos",
+    title: "DestinoCr",
     description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
-    image: "/projects/xp.jpg",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
-  },
-  {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
-    description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "/projects/xp.jpg",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
-  },
+      "Sistema Experto para recomendaciones turisticas a lo largo y ancho del pais de Costa Rica",
+    link: "https://destinoscr2.000webhostapp.com/",
+    github: "https://github.com/miguelaragonh/Proyecto-1-SE--V2",
+    image: "/projects/DestinoCR.PNG",
+    tags: [TAGS.LARAVEL, TAGS.CSS, TAGS.JS, TAGS.PHP],
+  }
 ]
 ---
 
@@ -49,9 +53,9 @@ const PROJECTS = [
   </div>
 
   <div class="w-full md:w-1/2 md:max-w-lg">
-    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+    <h1 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
       {title}
-    </h3>
+    </h1>
     <div class="flex flex-wrap mt-2">
       <ul class="flex flex-row mb-2 gap-x-2">
           {tags.map((tag) => (

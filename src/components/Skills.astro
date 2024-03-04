@@ -1,0 +1,221 @@
+---
+import Html5 from "@/components/icons/Html5.astro";
+import Css3 from "@/components/icons/Css3.astro";
+import JS from "@/components/icons/JS.astro";
+import React from "@/components/icons/React.astro";
+import Bootstrap from "@/components/icons/Bootstrap.astro";
+import GitHub from "@/components/icons/GitHub.astro";
+import Php from "@/components/icons/Php.astro";
+import Mysql from "@/components/icons/Mysql.astro";
+import Nodejs from "@/components/icons/Nodejs.astro";
+import Npm from "@/components/icons/Npm.astro";
+import Laravel from "@/components/icons/Laravel.astro";
+import Sql from "@/components/icons/Sql.astro";
+
+const tecnologias = [
+  {
+    icono: `<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-html5" width="45" height="45" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z" /><path d="M15.5 8h-7l.5 4h6l-.5 3.5l-2.5 .75l-2.5 -.75l-.1 -.5" /></svg>`,
+    title: "Html",
+    level: "Basico",
+  },
+];
+---
+
+<div class="skills__content grid" data-content id="skills">
+  <div class="skills__area">
+    <div class="skills__box">
+      <div class="skills__group">
+        <div class="skills__data">
+          <i><Html5 /></i>
+          <div>
+            <h3 class="skills__name">HTML5</h3>
+          </div>
+        </div>
+
+        <div class="skills__data">
+          <i><Css3 /></i>
+          <div>
+            <h3 class="skills__name">CSS</h3>
+          </div>
+        </div>
+
+        <div class="skills__data">
+          <i><JS /></i>
+
+          <div>
+            <h3 class="skills__name">JavaScript</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills__group">
+        <div class="skills__data">
+          <i><React /></i>
+
+          <div>
+            <h3 class="skills__name">React.js</h3>
+          </div>
+        </div>
+
+        <div class="skills__data">
+          <i><Bootstrap /></i>
+
+          <div>
+            <h3 class="skills__name">Bootstrap</h3>
+          </div>
+        </div>
+
+        <div class="skills__data">
+          <i><GitHub /></i>
+
+          <div>
+            <h3 class="skills__name">GitHub</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="skills__area">
+    <div class="skills__box">
+      <div class="skills__group">
+        <div class="skills__data">
+          <i><Laravel /></i>
+
+          <div>
+            <h3 class="skills__name">Laravel</h3>
+          </div>
+        </div>
+
+        <div class="skills__data">
+          <i><Mysql /></i>
+
+          <div>
+            <h3 class="skills__name">MySQL</h3>
+          </div>
+        </div>
+
+        <div class="skills__data">
+          <i><Nodejs /></i>
+          <div>
+            <h3 class="skills__name">Node.js</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills__group">
+        <div class="skills__data">
+          <i><Sql /></i>
+
+          <div>
+            <h3 class="skills__name">SQLServer</h3>
+          </div>
+        </div>
+
+        <div class="skills__data">
+          <i><Npm /></i>
+
+          <div>
+            <h3 class="skills__name">NPM</h3>
+          </div>
+        </div>
+        <div class="skills__data">
+          <i><Php /></i>
+
+          <div>
+            <h3 class="skills__name">PHP</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .skills__content {
+    display:flex;
+    row-gap: 2.5rem; /* Ajusta la cantidad de espacio entre las áreas según tus necesidades */
+  }
+  .skills__area {  /* Ajusta la cantidad de espacio entre las áreas según tus necesidades */
+  }
+  .skills__title {
+    font-size: var(--h3-font-size);
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .skills__box {
+    display: flex;
+    justify-content: center;
+    column-gap: 3rem;
+  }
+
+  .skills__group {
+    display: grid;
+    align-content: flex-start;
+    row-gap: 1rem;
+  }
+
+  .skills__data {
+    display: flex;
+    column-gap: 0.5rem;
+  }
+
+  .skills__data i {
+    font-size: 3rem;
+    color: var(--first-color);
+  }
+
+  .skills__name {
+    font-size: var(--normal-font-size);
+    font-weight: 600;
+    line-height: 38px;
+  }
+
+  .skills__level {
+    font-size: var(--smaller-font-size);
+  }
+
+  @media screen and (max-width: 450px) {
+    .skills__box {
+      column-gap: 1rem;
+    }
+    .skills__data i {
+      font-size: 3rem;
+    }
+    .skills__area {
+      margin-right: 12%; /* Ajusta la cantidad de espacio entre las áreas según tus necesidades */
+    }
+    .skills__content {
+      display:contents;
+    }
+  }
+
+  /* For medium devices */
+
+  @media screen and (min-width: 776px) {
+    .projects__content,
+    .skills__content {
+      grid-template-columns: repeat(2, 332px);
+    }
+
+    .skills__content {
+      justify-content: center;
+      column-gap: 3rem; 
+    }
+    .skills__area {
+      margin-right: 15%; /* Ajusta la cantidad de espacio entre las áreas según tus necesidades */
+    }
+  }
+
+  /* For large devices */
+  @media screen and (min-width: 992px) {
+    .skills__title {
+      font-size: var(--normal-font-size);
+      margin-bottom: 2.5rem;
+    }
+    .skills__area {
+      margin-right: 15%; /* Ajusta la cantidad de espacio entre las áreas según tus necesidades */
+    } 
+  }
+</style>
