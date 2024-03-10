@@ -8,6 +8,7 @@ import Laravel from "./icons/Laravel.astro"
 import Css3 from "./icons/Css3.astro"
 import JS from "./icons/JS.astro"
 import Php from "./icons/Php.astro"
+import React from "./icons/React.astro"
 
 const TAGS = {
   LARAVEL: {
@@ -25,8 +26,12 @@ const TAGS = {
     icon: JS,
   },PHP: {
     name: "",
-    class: "bg-[#003159] text-white",
+    class: "bg-[#AEB2D5] text-white",
     icon: Php,
+  },REACT: {
+    name: "",
+    class: "bg-[#61DBFB] text-white",
+    icon: React,
   },
 }
 const PROJECTS = [
@@ -38,6 +43,14 @@ const PROJECTS = [
     github: "https://github.com/miguelaragonh/Proyecto-1-SE--V2",
     image: "/projects/DestinoCR.PNG",
     tags: [TAGS.LARAVEL, TAGS.CSS, TAGS.JS, TAGS.PHP],
+  },{
+    title: "Traductor",
+    description:
+      "Sistema de traduccion online consumiendo la api mymemory",
+    link: "https://destinoscr2.000webhostapp.com/",
+    github: "https://github.com/miguelaragonh/Traductor",
+    image: "/projects/traductor.png",
+    tags: [TAGS.REACT, TAGS.CSS, TAGS.JS],
   }
 ]
 ---
