@@ -2,7 +2,12 @@
 import ThemeToggle from './ThemeToggle.astro'
 
 const navItems = [
-  {
+  
+{
+    title: "Inicio",
+    label: "inicio",
+    url: "/#inicio",
+  },{
     title: "Experiencia",
     label: "experiencia",
     url: "/#experiencia",
@@ -24,7 +29,7 @@ const navItems = [
   {
     title: "Contacto",
     label: "contacto",
-    url: "mailto:miduga@gmail.com",
+    url: "mailto:miguelaragon.dev@gmail.com",
   },
 ]
 ---
@@ -32,19 +37,20 @@ const navItems = [
 <header
   class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
 >
-  <nav class="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200">
-    {
-      navItems.map((link) => (
-        <a
-          class="relative block px-2 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-400"
-          aria-label={link.label}
-          href={link.url}
-        >
-          {link.title}
-        </a>
-      ))
-    }
-  </nav>
+<nav class="flex flex-wrap px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200">
+  {
+    navItems.map((link) => (
+      <a
+        class="relative block px-2 py-2 sm:mx-2 transition hover:text-yellow-500 dark:hover:text-yellow-400"
+        aria-label={link.label}
+        href={link.url}
+      >
+        {link.title}
+      </a>
+    ))
+  }
+</nav>
+
   <ThemeToggle />
 </header>
 

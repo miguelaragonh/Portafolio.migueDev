@@ -1,17 +1,17 @@
 ---
-import Layout from "@/layouts/Layout.astro"
+import Layout from "@/layouts/Layout.astro";
 
-import AboutMe from "@/components/AboutMe.astro"
-import Skills from "@/components/Skills.astro"
-import Briefcase from "@/components/icons/Briefcase.astro"
-import CodeIcon from "@/components/icons/Code.astro"
-import Tools from "@/components/icons/Tools.astro"
-import Experience from "@/components/Experience.astro"
-import ProfileCheck from "@/components/icons/ProfileCheck.astro"
-import Projects from "@/components/Projects.astro"
-import SectionContainer from "@/components/SectionContainer.astro"
+import AboutMe from "@/components/AboutMe.astro";
+import Skills from "@/components/Skills.astro";
+import Briefcase from "@/components/icons/Briefcase.astro";
+import CodeIcon from "@/components/icons/Code.astro";
+import Tools from "@/components/icons/Tools.astro";
+import Experience from "@/components/Experience.astro";
+import ProfileCheck from "@/components/icons/ProfileCheck.astro";
+import Projects from "@/components/Projects.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
 
-import Hero from "@/components/Hero.astro"
+import Hero from "@/components/Hero.astro";
 ---
 
 <Layout
@@ -19,44 +19,48 @@ import Hero from "@/components/Hero.astro"
   description="Desarrollador Web, especializado en crear aplicaciones únicas."
 >
   <main class="px-4">
-    <SectionContainer class="py-16 md:py-36">
-      <Hero>
-      </slot>
-    </Hero>
+    <SectionContainer id="inicio" class="py-16 md:py-36">
+      <Hero />
     </SectionContainer>
-    <div class="space-y-24">
-    <SectionContainer id="experiencia">
-      <h2
-        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
-      >
-        <Briefcase class="size-8" />
-        Experiencia
-      </h2>
-      <Experience />
-    </SectionContainer>
+  </main>
+  <div class="space-y-24">
+    <div data-aos="fade-up" data-aos-duration="1500">
+      <SectionContainer id="experiencia">
+        <h2
+          class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+        >
+          <Briefcase class="size-8" />
+          Experiencia
+        </h2>
+        <Experience />
+      </SectionContainer>
+    </div>
 
-    <SectionContainer id="proyectos">
-      <h2
-        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
-      >
-        <CodeIcon class="size-7" />
-        Proyectos
-      </h2>
-      <Projects />
-    </SectionContainer>
+    <div data-aos="fade-up" data-aos-duration="1500">
+      <SectionContainer id="proyectos">
+        <h2
+          class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+        >
+          <CodeIcon class="size-7" />
+          Proyectos
+        </h2>
+        <Projects />
+      </SectionContainer>
+    </div>
 
-
-    <SectionContainer id="tecnologias">
-      <h2
-        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
-      >
-        <Tools class="size-7" />
-        Tecnologias
-      </h2>
-     <Skills/>
-    </SectionContainer>
-
-    <SectionContainer id="sobre-mi" >
+    <div data-aos="fade-up" data-aos-duration="1500">
+      <SectionContainer id="tecnologias">
+        <h2
+          class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+        >
+          <Tools class="size-7" />
+          Tecnologias
+        </h2>
+        <Skills />
+      </SectionContainer>
+    </div>
+    <div data-aos="fade-up" data-aos-duration="1500">
+    <SectionContainer id="sobre-mi">
       <h2
         class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
       >
@@ -66,5 +70,5 @@ import Hero from "@/components/Hero.astro"
       <AboutMe />
     </SectionContainer>
   </div>
-  </main>
+  </div>
 </Layout>
