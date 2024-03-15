@@ -1,99 +1,127 @@
 ---
-import ThemeToggle from './ThemeToggle.astro'
+import ThemeToggle from "./ThemeToggle.astro";
+import Home from "@/components/icons/Home.astro";
+import Briefcase from "@/components/icons/Briefcase.astro";
+import CodeIcon from "@/components/icons/Code.astro";
+import Tools from "@/components/icons/Tools.astro";
+import Experience from "@/components/Experience.astro";
+import ProfileCheck from "@/components/icons/ProfileCheck.astro";
+import MailIcon from "@/components/icons/Mail.astro";
+
 
 const navItems = [
-  
-{
+  {
     title: "Inicio",
     label: "inicio",
     url: "/#inicio",
-  },{
+    icon: Home,
+  },
+  {
     title: "Experiencia",
     label: "experiencia",
     url: "/#experiencia",
+    icon: Briefcase,
+
   },
   {
     title: "Proyectos",
     label: "proyectos",
     url: "/#proyectos",
-  },{
+    icon:CodeIcon,
+
+  },
+  {
     title: "Tecnologias",
     label: "tecnologias",
     url: "/#tecnologias",
+    icon: Tools,
   },
   {
     title: "Sobre mí",
     label: "sobre-mi",
     url: "/#sobre-mi",
+    icon: ProfileCheck,
   },
   {
     title: "Contacto",
     label: "contacto",
     url: "mailto:miguelaragon.dev@gmail.com",
+    icon: MailIcon,
   },
-]
+];
 ---
 
 <header
   class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
 >
-<nav class="flex flex-wrap px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200">
-  {
-    navItems.map((link) => (
-      <a
-        class="relative block px-2 py-2 sm:mx-2 transition hover:text-yellow-500 dark:hover:text-yellow-400"
-        aria-label={link.label}
-        href={link.url}
-      >
-        {link.title}
-      </a>
-    ))
-  }
-</nav>
+  <nav
+    class="flex flex-wrap px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200"
+  >
+    {
+      navItems.map((link) => (
+        <a
+          class="relative block px-2 py-2 sm:mx-2 transition hover:text-yellow-500 dark:hover:text-yellow-400"
+          aria-label={link.label}
+          href={link.url}
+        >
+          {/* Ocultar el ícono "Home" en pantallas grandes y mostrarlo en dispositivos móviles */}
+          {link.icon && (
+            <span class=" sm:hidden inline-block">
+              <link.icon className="inline-block" width={24} height={24} />
+            </span>
+          )}
 
+          <span class="hidden sm:inline-block">
+            {" "}
+            {link.title}
+          </span>
+        </a>
+      ))
+    }
+  </nav>
   <ThemeToggle />
 </header>
 
 <script>
   document.addEventListener("astro:page-load", () => {
-    const sections = document.querySelectorAll("section")
-    const navItems = document.querySelectorAll("header nav a")
+    const sections = document.querySelectorAll("section");
+    const navItems = document.querySelectorAll("header nav a");
 
     const callback = (entries: any[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           navItems.forEach((item) => {
             if (item.getAttribute("aria-label") == entry.target.id) {
-              item.classList.add("text-yellow-500")
+              item.classList.add("text-yellow-500");
             } else {
-              item.classList.remove("text-yellow-500")
+              item.classList.remove("text-yellow-500");
             }
-          })
+          });
         }
-      })
-    }
+      });
+    };
 
     const observer = new IntersectionObserver(callback, {
       root: null,
       rootMargin: "0px",
       threshold: 0.3,
-    })
+    });
 
     sections.forEach((section) => {
-      observer.observe(section)
-    })
+      observer.observe(section);
+    });
 
     // Cleanup function
     document.onvisibilitychange = () => {
       if (document.visibilityState === "hidden") {
-        observer.disconnect()
+        observer.disconnect();
       } else {
         sections.forEach((section) => {
-          observer.observe(section)
-        })
+          observer.observe(section);
+        });
       }
-    }
-  })
+    };
+  });
 </script>
 
 <style>
