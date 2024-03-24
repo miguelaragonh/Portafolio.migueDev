@@ -20,209 +20,65 @@ const tecnologias = [
   },
 ];
 ---
-
-<div class="skills__content grid" data-content id="skills">
-  <div class="skills__area" data-aos="fade-right"
-  data-aos-offset="100"
-  data-aos-easing="ease-in-sine">
-    <div class="skills__box">
-      <div class="skills__group">
-        <div class="skills__data">
-          <i><Html5 width={45} height={45} width={45} height={45}/></i>
-          <div>
-            <h3 class="skills__name">HTML5</h3>
-          </div>
-        </div>
-
-        <div class="skills__data">
-          <i><Css3 width={45} height={45}/></i>
-          <div>
-            <h3 class="skills__name">CSS</h3>
-          </div>
-        </div>
-
-        <div class="skills__data">
-          <i><JS width={45} height={45}/></i>
-
-          <div>
-            <h3 class="skills__name">JavaScript</h3>
-          </div>
-        </div>
+<div class="flex flex-wrap gap-y-10 justify-center" data-content id="skills" data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine">
+  <div class="w-full md:w-1/2" >
+    <div class="grid grid-cols-2 gap-6">
+      <div class="flex items-center">
+        <Html5 class="w-12 h-12 text-primary" width={45} height={45} />
+        <h3 class="ml-4 text-xl font-semibold">HTML5</h3>
       </div>
-
-      <div class="skills__group">
-        <div class="skills__data">
-          <i><React width={45} height={45}/></i>
-
-          <div>
-            <h3 class="skills__name">React.js</h3>
-          </div>
-        </div>
-
-        <div class="skills__data">
-          <i><Bootstrap width={45} height={45}/></i>
-
-          <div>
-            <h3 class="skills__name">Bootstrap</h3>
-          </div>
-        </div>
-
-        <div class="skills__data">
-          <i><GitHub width={45} height={45}/></i>
-
-          <div>
-            <h3 class="skills__name">GitHub</h3>
-          </div>
-        </div>
+      <div class="flex items-center">
+        <Css3 class="w-12 h-12 text-primary" width={45} height={45} />
+        <h3 class="ml-4 text-xl font-semibold">CSS</h3>
+      </div>
+      <div class="flex items-center">
+        <JS class="w-12 h-12 text-primary" width={45} height={45} />
+        <h3 class="ml-4 text-xl font-semibold">JavaScript</h3>
+      </div>
+      <div class="flex items-center">
+        <React class="w-12 h-12 text-primary" width={45} height={45} />
+        <h3 class="ml-4 text-xl font-semibold">React.js</h3>
+      </div>
+      <div class="flex items-center">
+        <Bootstrap class="w-12 h-12 text-primary" width={45} height={45} />
+        <h3 class="ml-4 text-xl font-semibold">Bootstrap</h3>
+      </div>
+      <div class="flex items-center">
+        <GitHub class="w-12 h-12 text-primary" width={45} height={45} />
+        <h3 class="ml-4 text-xl font-semibold">GitHub</h3>
       </div>
     </div>
   </div>
-
-  <div class="skills__area"
-  data-aos="fade-left"
-  data-aos-offset="100"
-  data-aos-easing="ease-in-sine"
   
-  >
-    <div class="skills__box">
-      <div class="skills__group">
-        <div class="skills__data">
-          <i><Laravel width={45} height={45}/></i>
-
-          <div>
-            <h3 class="skills__name">Laravel</h3>
-          </div>
-        </div>
-
-        <div class="skills__data">
-          <i><Mysql width={45} height={45}/></i>
-
-          <div>
-            <h3 class="skills__name">MySQL</h3>
-          </div>
-        </div>
-
-        <div class="skills__data">
-          <i><Nodejs width={45} height={45}/></i>
-          <div>
-            <h3 class="skills__name">Node.js</h3>
-          </div>
-        </div>
+  <div class="w-full md:w-1/2" >
+    <div class="grid grid-cols-2 gap-6">
+      <div class="flex items-center">
+        <Laravel class="w-12 h-12 text-primary" width={45} height={45} />
+        <h3 class="ml-4 text-xl font-semibold">Laravel</h3>
       </div>
-
-      <div class="skills__group">
-        <div class="skills__data">
-          <i><Sql width={45} height={45}/></i>
-
-          <div>
-            <h3 class="skills__name">SQLServer</h3>
-          </div>
-        </div>
-
-        <div class="skills__data">
-          <i><Npm width={45} height={45}/></i>
-
-          <div>
-            <h3 class="skills__name">NPM</h3>
-          </div>
-        </div>
-        <div class="skills__data">
-          <i><Php width={45} height={45}/></i>
-
-          <div>
-            <h3 class="skills__name">PHP</h3>
-          </div>
-        </div>
+      <div class="flex items-center">
+        <Mysql class="w-12 h-12 text-primary" width={45} height={45} />
+        <h3 class="ml-4 text-xl font-semibold">MySQL</h3>
+      </div>
+      <div class="flex items-center">
+        <Nodejs class="w-12 h-12 text-primary" width={45} height={45} />
+        <h3 class="ml-4 text-xl font-semibold">Node.js</h3>
+      </div>
+      <div class="flex items-center">
+        <Sql class="w-12 h-12 text-primary" width={45} height={45} />
+        <h3 class="ml-4 text-xl font-semibold">SQLServer</h3>
+      </div>
+      <div class="flex items-center">
+        <Npm class="w-12 h-12 text-primary" width={45} height={45} />
+        <h3 class="ml-4 text-xl font-semibold">NPM</h3>
+      </div>
+      <div class="flex items-center">
+        <Php class="w-12 h-12 text-primary" width={45} height={45} />
+        <h3 class="ml-4 text-xl font-semibold">PHP</h3>
       </div>
     </div>
   </div>
 </div>
 
-<style>
-  .skills__content {
-    display:flex;
-    row-gap: 2.5rem; /* Ajusta la cantidad de espacio entre las áreas según tus necesidades */
-  }
-  .skills__area {  /* Ajusta la cantidad de espacio entre las áreas según tus necesidades */
-  }
-  .skills__title {
-    font-size: var(--h3-font-size);
-    text-align: center;
-    margin-bottom: 1.5rem;
-  }
 
-  .skills__box {
-    display: flex;
-    justify-content: center;
-    column-gap: 3rem;
-  }
 
-  .skills__group {
-    display: grid;
-    align-content: flex-start;
-    row-gap: 1rem;
-  }
-
-  .skills__data {
-    display: flex;
-    column-gap: 0.5rem;
-  }
-
-  .skills__data i {
-    font-size: 3rem;
-    color: var(--first-color);
-  }
-
-  .skills__name {
-    font-size: var(--normal-font-size);
-    font-weight: 600;
-    line-height: 38px;
-  }
-
-  .skills__level {
-    font-size: var(--smaller-font-size);
-  }
-
-  @media screen and (max-width: 450px) {
-    .skills__box {
-      column-gap: 1rem;
-    }
-    .skills__data i {
-      font-size: 3rem;
-    }
-    .skills__area {
-      margin-right: 12%; /* Ajusta la cantidad de espacio entre las áreas según tus necesidades */
-    }
-    .skills__content {
-      display:contents;
-    }
-  }
-
-  /* For medium devices */
-
-  @media screen and (min-width: 776px) {
-    .projects__content,
-    .skills__content {
-      grid-template-columns: repeat(2, 332px);
-    }
-
-    .skills__content {
-      justify-content: center;
-      column-gap: 3rem; 
-    }
-    .skills__area {
-      margin-right: 15%; /* Ajusta la cantidad de espacio entre las áreas según tus necesidades */
-    }
-  }
-
-  /* For large devices */
-  @media screen and (min-width: 992px) {
-    .skills__title {
-      font-size: var(--normal-font-size);
-      margin-bottom: 2.5rem;
-    }
-    .skills__area {
-      margin-right: 15%; /* Ajusta la cantidad de espacio entre las áreas según tus necesidades */
-    } 
-  }
-</style>
