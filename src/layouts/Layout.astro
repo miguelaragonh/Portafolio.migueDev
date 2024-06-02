@@ -2,7 +2,6 @@
 import "@fontsource-variable/onest";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import Typed from 'typed.js';
 import { ViewTransitions } from "astro:transitions";
 
 interface Props {
@@ -114,16 +113,10 @@ const { description, title } = Astro.props;
     </style>
     <script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
-    <script>
-     
-    </script>
+    
 
     <script is:inline>
       AOS.init();
-      var typed = new Typed("#element", {
-        strings: ["<i>First</i> sentence.", "&amp; a second sentence."],
-        typeSpeed: 50,
-      });
     </script>
   </body>
 </html>
