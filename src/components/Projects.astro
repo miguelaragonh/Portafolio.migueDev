@@ -9,12 +9,18 @@ import Css3 from "./icons/Css3.astro";
 import JS from "./icons/JS.astro";
 import Php from "./icons/Php.astro";
 import React from "./icons/React.astro";
+import Angular from "./icons/Angular.astro";
 
 const TAGS = {
   LARAVEL: {
     name: "Laravel",
     class: "bg-black text-white",
     icon: Laravel,
+  },
+  Angular: {
+    name: "Angular",
+    class: "bg-[#FF0000]  text-white",
+    icon: Angular,
   },
   CSS: {
     name: "CSS",
@@ -41,11 +47,20 @@ const PROJECTS = [
   {
     title: "DestinoCr",
     description:
-      "Sistema Experto para recomendaciones turisticas a lo largo y ancho del pais de Costa Rica",
+      "Sistema Experto para recomendaciones turisticas a lo largo y ancho del pais de Costa Rica ",
     link: "https://destinoscr2.000webhostapp.com/",
     github: "https://github.com/miguelaragonh/Proyecto-1-SE--V2",
     image: "/projects/DestinoCR.PNG",
     tags: [TAGS.LARAVEL, TAGS.CSS, TAGS.JS, TAGS.PHP],
+  },
+  {
+    title: "Tsneaker CR",
+    description:
+      "E-commerce de zapatillas, con un diseño minimalista y moderno, con un sistema de autenticación de usuarios y administradores, con un carrito de compras",
+    link: "https://drive.google.com/file/d/1PKRZMRkHJW-dyvJ0rApWbSVMPvR_fH2s/view?usp=sharing",
+    github: "https://github.com/miguelaragonh/ProyectoLenguajes",
+    image: "/projects/ts.png",
+    tags: [TAGS.Angular, TAGS.CSS, TAGS.JS, TAGS.PHP],
   },
   {
     title: "Traductor",
@@ -62,10 +77,12 @@ const PROJECTS = [
 <div class="flex flex-col gap-y-16">
   {
     PROJECTS.map(({ image, title, description, tags, link, github }) => (
-
-    
-      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0" data-aos="fade-up" data-aos-duration="1500" 
-  data-aos-easing="ease-in-sine">
+      <article
+        class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0"
+        data-aos="fade-up"
+        data-aos-duration="1500"
+        data-aos-easing="ease-in-sine"
+      >
         <div class="w-full md:w-1/2">
           <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
             <img

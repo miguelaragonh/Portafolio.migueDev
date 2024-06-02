@@ -11,6 +11,7 @@ import Nodejs from "@/components/icons/Nodejs.astro";
 import Npm from "@/components/icons/Npm.astro";
 import Laravel from "@/components/icons/Laravel.astro";
 import Sql from "@/components/icons/Sql.astro";
+import Java from "./icons/Java.astro";
 
 const tecnologias = [
   {
@@ -20,8 +21,16 @@ const tecnologias = [
   },
 ];
 ---
-<div class="flex flex-wrap gap-y-10 justify-center" data-content id="skills" data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine">
-  <div class="w-full md:w-1/2" >
+
+<div
+  class="flex flex-wrap gap-y-10 justify-center"
+  data-content
+  id="skills"
+  data-aos="fade-right"
+  data-aos-offset="100"
+  data-aos-easing="ease-in-sine"
+>
+  <div class="w-full md:w-1/2">
     <div class="grid grid-cols-2 gap-6">
       <div class="flex items-center">
         <Html5 width={45} height={45} />
@@ -49,8 +58,8 @@ const tecnologias = [
       </div>
     </div>
   </div>
-  
-  <div class="w-full md:w-1/2" >
+
+  <div class="w-full md:w-1/2">
     <div class="grid grid-cols-2 gap-6">
       <div class="flex items-center">
         <Laravel width={45} height={45} />
@@ -66,7 +75,7 @@ const tecnologias = [
       </div>
       <div class="flex items-center">
         <Sql width={45} height={45} />
-        <h3 class="ml-4 text-xl font-semibold">SQLServer</h3>
+        <h3 class="ml-4 text-xl font-semibold">SQL</h3>
       </div>
       <div class="flex items-center">
         <Npm width={45} height={45} />
@@ -75,10 +84,19 @@ const tecnologias = [
       <div class="flex items-center">
         <Php width={45} height={45} />
         <h3 class="ml-4 text-xl font-semibold">PHP</h3>
+      </div> 
+    </div>
+  </div>
+  <div class="w-full md:w-1/2">
+    <div class="grid grid-cols-2 gap-6">
+      <div class="flex items-center">
+        <Java width={45} height={45} />
+        <h3 class="ml-4 text-xl font-semibold">Java</h3>
+      </div>
+      <div class="flex items-center">
+        <Nodejs width={45} height={45} />
+        <h3 class="ml-4 text-xl font-semibold">Express</h3>
       </div>
     </div>
   </div>
 </div>
-
-
-

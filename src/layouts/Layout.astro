@@ -1,15 +1,16 @@
 ---
-import "@fontsource-variable/onest"
-import Header from "../components/Header.astro"
-import Footer from "../components/Footer.astro"
-import { ViewTransitions } from "astro:transitions"
+import "@fontsource-variable/onest";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Typed from 'typed.js';
+import { ViewTransitions } from "astro:transitions";
 
 interface Props {
-  title: string
-  description: string
+  title: string;
+  description: string;
 }
 
-const { description, title } = Astro.props
+const { description, title } = Astro.props;
 ---
 
 <!doctype html>
@@ -111,9 +112,18 @@ const { description, title } = Astro.props
         }
       }
     </style>
-      <script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
-      <script is:inline>
-        AOS.init();
-      </script>
+    <script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script>
+     
+    </script>
+
+    <script is:inline>
+      AOS.init();
+      var typed = new Typed("#element", {
+        strings: ["<i>First</i> sentence.", "&amp; a second sentence."],
+        typeSpeed: 50,
+      });
+    </script>
   </body>
 </html>
