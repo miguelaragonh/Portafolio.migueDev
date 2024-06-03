@@ -29,7 +29,7 @@ import Doc from "./icons/Doc.astro";
     <h1
       class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
     >
-      <span id="element">Hey, soy Miguel Aragón</span>
+      <span id="element"></span>
     </h1>
 
     <p
@@ -63,30 +63,5 @@ import Doc from "./icons/Doc.astro";
       </SocialPill>
     </nav>
   </div>
-  <script>
-   /* document.addEventListener('DOMContentLoaded', (event) => {
-        const text = 'Hey, soy Miguel Aragón';
-        let i = 0;
-        const speed = 280; // Velocidad de escritura en milisegundos
-        const delay = 100; // Retraso antes de borrar el texto en milisegundos
-
-        function typeWriter() {
-            if (i < text.length) {
-                document.getElementById('element').innerHTML += text.charAt(i);
-                i++;
-                setTimeout(typeWriter, speed);
-            } else {
-                // Cuando se ha escrito todo el texto, espera un poco antes de borrar el contenido y comenzar de nuevo
-                setTimeout(() => {
-                    document.getElementById('element').innerHTML = '';
-                    i = 0;
-                    typeWriter();
-                }, delay);
-            }
-        }
-
-        typeWriter();
-    });*/
-</script>
+  <script src="./typeWritter"></script>
 </div>
-
