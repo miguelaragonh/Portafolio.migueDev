@@ -10,6 +10,7 @@ import JS from "./icons/JS.astro";
 import Php from "./icons/Php.astro";
 import React from "./icons/React.astro";
 import Angular from "./icons/Angular.astro";
+import Ionic from "./icons/Ionic.astro";
 
 const TAGS = {
   LARAVEL: {
@@ -32,6 +33,11 @@ const TAGS = {
     class: "bg-[#FFd700] text-black",
     icon: JS,
   },
+  Express: {
+    name: "ExpressJS",
+    class: "bg-[#FFd700] text-black",
+    icon: JS,
+  },
   PHP: {
     name: "PHP",
     class: "bg-[#AEB2D5] text-blue-900",
@@ -42,14 +48,31 @@ const TAGS = {
     class: "bg-[#61DBFB] text-black",
     icon: React,
   },
+  Ionic: {
+    name: "Ionic",
+    class: "bg-[#3880FF] text-white",
+    icon: Ionic,
+  },
 };
 const PROJECTS = [
+  {
+    title: "SGI( Sistema de Gestion de Incidentes)",
+    description:
+      "Sistema encargado de automatizar la gestion de incidentes dentro de la sede caribe de la UCR",
+    link: "#",
+    github: [
+      "https://github.com/miguelaragonh/SGI-B2",
+      "https://github.com/miguelaragonh/SGI-Frontend",
+    ],
+    image: "/projects/SGI.png",
+    tags: [TAGS.Ionic, TAGS.REACT, TAGS.Express, TAGS.CSS],
+  },
   {
     title: "DestinoCr",
     description:
       "Sistema Experto para recomendaciones turisticas a lo largo y ancho del pais de Costa Rica ",
     link: "https://destinoscr2.000webhostapp.com/",
-    github: "https://github.com/miguelaragonh/Proyecto-1-SE--V2",
+    github: ["https://github.com/miguelaragonh/Proyecto-1-SE--V2"],
     image: "/projects/DestinoCR.PNG",
     tags: [TAGS.LARAVEL, TAGS.CSS, TAGS.JS, TAGS.PHP],
   },
@@ -58,7 +81,7 @@ const PROJECTS = [
     description:
       "E-commerce de zapatillas, con un diseño minimalista y moderno, con un sistema de autenticación de usuarios y administradores, con un carrito de compras",
     link: "https://drive.google.com/file/d/1PKRZMRkHJW-dyvJ0rApWbSVMPvR_fH2s/view?usp=sharing",
-    github: "https://github.com/miguelaragonh/ProyectoLenguajes",
+    github: ["https://github.com/miguelaragonh/ProyectoLenguajes"],
     image: "/projects/ts.png",
     tags: [TAGS.Angular, TAGS.CSS, TAGS.JS, TAGS.PHP],
   },
@@ -67,7 +90,7 @@ const PROJECTS = [
     description:
       "Sistema de traduccion online que utiliza una API para acceder a servicios de traducción en línea. Con esta aplicación, los usuarios pueden ingresar texto en un idioma y obtener una traducción instantánea en otro idioma de su elección. ",
     link: "https://main--traductomiguad.netlify.app/",
-    github: "https://github.com/miguelaragonh/Traductor",
+    github: ["https://github.com/miguelaragonh/Traductor"],
     image: "/projects/traductor.png",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.JS],
   },
@@ -116,12 +139,19 @@ const PROJECTS = [
               {description}
             </div>
             <footer class="flex items-end justify-start mt-4 gap-x-4">
-              {github && (
-                <LinkButton href={github}>
-                  <GitHub class="size-6" />
-                  Code
-                </LinkButton>
-              )}
+              {Array.isArray(github)
+                ? github.map((link, index) => (
+                    <LinkButton href={link}>
+                      <GitHub class="size-6" />
+                      {index === 0 ? "Code" : "Frontend"}
+                    </LinkButton>
+                  ))
+                : github && (
+                    <LinkButton href={github}>
+                      <GitHub class="size-6" />
+                      Code
+                    </LinkButton>
+                  )}
               {link && (
                 <LinkButton href={link}>
                   <Link class="size-4" />
