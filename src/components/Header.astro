@@ -8,7 +8,6 @@ import Experience from "@/components/Experience.astro";
 import ProfileCheck from "@/components/icons/ProfileCheck.astro";
 import MailIcon from "@/components/icons/Mail.astro";
 
-
 const navItems = [
   {
     title: "Inicio",
@@ -21,14 +20,12 @@ const navItems = [
     label: "experiencia",
     url: "/#experiencia",
     icon: Briefcase,
-
   },
   {
     title: "Proyectos",
     label: "proyectos",
     url: "/#proyectos",
-    icon:CodeIcon,
-
+    icon: CodeIcon,
   },
   {
     title: "Tecnologias",
@@ -45,17 +42,18 @@ const navItems = [
   {
     title: "Contacto",
     label: "contacto",
-    url: "mailto:miguelaragon.dev@gmail.com",
+    url: "/#contacto",
     icon: MailIcon,
   },
 ];
 ---
 
 <header
-  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
+  class="fixed top-1 z-10 flex items-center justify-center w-full mx-auto mt-3"
 >
   <nav
-    class="flex flex-wrap px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200"
+    class="flex flex-wrap font-medium rounded-full text-gray-600 dark:text-gray-200
+     shadow-lg ring-1 backdrop-blur bg-white-800 dark:bg-gray-800 ring-white  w-[96vw] max-w-full md:w-[110vw] md:max-w-[870px]  justify-center md:items-center"
   >
     {
       navItems.map((link) => (
@@ -71,15 +69,16 @@ const navItems = [
             </span>
           )}
 
-          <span class="hidden sm:inline-block">
-            {" "}
-            {link.title}
-          </span>
+          <span class="hidden sm:inline-block"> {link.title}</span>
         </a>
       ))
     }
+    <div
+      class="relative block px-2 py-2.5 sm:mx-2 transition hover:text-yellow-500 dark:hover:text-yellow-400"
+    >
+      <ThemeToggle />
+    </div>
   </nav>
-  <ThemeToggle />
 </header>
 
 <script>
@@ -124,16 +123,4 @@ const navItems = [
   });
 </script>
 
-<style>
-  nav {
-    animation: nav-shadown 1s linear both;
-    animation-timeline: scroll();
-    animation-range: 0 100px;
-  }
-
-  @keyframes nav-shadown {
-    to {
-      @apply shadow-lg ring-1 backdrop-blur bg-gray-300/60 dark:bg-gray-800/60 ring-white/10;
-    }
-  }
-</style>
+<style></style>

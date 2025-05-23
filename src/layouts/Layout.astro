@@ -21,13 +21,24 @@ const { description, title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "Lu5Y2kM2NxzTTcuvQ",
+        });
+      })();
+    </script>
     <title>{title}</title>
     <ViewTransitions />
   </head>
 
   <body class="relative text-black dark:text-white">
     <div
-      class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-gray-50 dark:bg-gray-950
+      class="absolute top-1 bottom-0 z-[-2] min-h-screen w-full bg-gray-50 dark:bg-gray-950
       bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(217,216,255,0.8),rgba(255,255,255,0.9))]
       dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
     >
@@ -112,8 +123,6 @@ const { description, title } = Astro.props;
       }
     </style>
     <script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
-    
 
     <script is:inline>
       AOS.init();

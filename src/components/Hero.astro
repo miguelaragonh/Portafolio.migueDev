@@ -8,10 +8,14 @@ import GitHub from "./icons/GitHub.astro";
 import Doc from "./icons/Doc.astro";
 ---
 
-<div class="max-w-xl">
-  <div class="flex gap-4 mb-4" data-aos="fade-right" data-aos-duration="1500">
+<div class="w-full h-full gap-6">
+  <div
+    class="flex flex-col gap-4 mb-6 h-full w-full flex items-center justify-center"
+    data-aos="fade-right"
+    data-aos-duration="1500"
+  >
     <img
-      class="rounded-full shadow-lg size-32"
+      class="rounded-full shadow-lg size-48"
       src="/me2.jpeg"
       alt={personalImageAlt}
     />
@@ -25,21 +29,25 @@ import Doc from "./icons/Doc.astro";
     </a>
   </div>
 
-  <div data-aos="fade-left" data-aos-duration="1500">
+  <div data-aos="fade-left" data-aos-duration="1500" class="w-full">
     <h1
-      class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
+      class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white text-center"
     >
       <span id="element"></span>
     </h1>
 
     <p
-      class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
+      class="mt-6 text-xl text-gray-800 text-center dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
     >
-    Profesional en Informática con habilidades excepcionales en <strong
-        >Desarrollo de Software,</strong
-      > diseño de sistemas y resolución de problemas tecnológicos.
+      Profesional con formación en Informática Empresarial,<strong>
+        con habilidades sólidas en desarrollo de sotfware, resolución de problemas
+        técnicos, trabajo en equipo y atención al detalle.
+      </strong> Además con experiencia en el
+      diseño, desarrollo y despliegue de soluciones web. Apasionado por la
+      creación de aplicaciones eficientes y centradas en el usuario,
+      
     </p>
-    <nav class="flex flex-wrap gap-4 mt-8">
+    <nav class="flex flex-wrap gap-4 mt-10 md:justify-center md:items-center">
       <SocialPill href="https://github.com/miguelaragonh">
         <GitHub class="size-6" />
         Github
@@ -47,21 +55,22 @@ import Doc from "./icons/Doc.astro";
       <SocialPill
         href="https://www.linkedin.com/in/miguel-arag%C3%B3n-2726bb267/"
       >
-        <LinkedInIcon class="size-4" />
+        <LinkedInIcon class="size-6" />
         LinkedIn
       </SocialPill>
-      <SocialPill href="mailto:miguelaragon.dev@gmail.com">
-        <MailIcon class="size-4" />
+      <SocialPill href="/#contacto" >
+        <MailIcon class="size-6" />
         Contáctame
       </SocialPill>
 
       <SocialPill
         href="https://www.canva.com/design/DAGgmAdKSJE/TBWuBYcqkiFGCRFrBUXGMg/edit?utm_content=DAGgmAdKSJE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
       >
-        <Doc width={20} height={20} class="size-4" />
-        CV
+        <Doc width={20} height={20} class="size-6" />
+        Curriculum
       </SocialPill>
     </nav>
+    
   </div>
   <script src="./typeWritter"></script>
 </div>
